@@ -1,9 +1,24 @@
 export default worksheet=>{
     console.log(worksheet,'worksheet')
-    const cellStyle = {
+    const cellStyle =  {
+        //字体属性
         font:{
             sz:16,
-            bold:true
+            bold:true,
+            color:{
+              rgb:'ff00ff'
+            }
+        },
+        //单元格的背景颜色
+        fill:{
+          //注意十六进制不带#
+          rgb:'ff0000'
+        },
+        //单元格对其方式
+        alignment:{
+          horizontal:'center',
+          vertical:'center',
+          wrap_text:true
         }
     };
 
