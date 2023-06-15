@@ -28,6 +28,10 @@ export default worksheet=>{
     // 设置样式的范围
     // const range = utils.decode_range(ws['!ref']);
     for (const cell of cells) {
-        worksheet[`${cell}1`].s = cellStyle
+        //如果存在 就写入对应的样式
+        if(worksheet[`${cell}1`]){
+            worksheet[`${cell}1`].s = cellStyle
+        }
+        
     }
 }
