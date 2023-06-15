@@ -21,12 +21,16 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import datatablejson from "./data/table.json";
-
+//导入 xlsx  只能解构
 import {utils} from "xlsx";
+
+//导入下载文件
 import {saveAs} from "file-saver";
 
+//导入样式下载
 import xlsxStyle from "xlsx-style";
 
+//导入更改 xlsx 样式
 import __excelStyle_index from "./excelStyle/index";
 
 
@@ -57,7 +61,11 @@ export default {
             const workbook = utils.book_new();
 
             // 使用json数据创建 一张表
-            const worksheet =utils.json_to_sheet(list,{header:header});
+            const worksheet =utils.json_to_sheet(list,{
+                header:header,
+                //头部数据设置从A2开始
+                origin:'A2'
+            });
             //样式处理
             __excelStyle_index(worksheet)
             // 导出格式

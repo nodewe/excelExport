@@ -1,0 +1,15 @@
+diff --git a/node_modules/xlsx-style/xlsx.js b/node_modules/xlsx-style/xlsx.js
+index 15b58b1..64b0f64 100644
+--- a/node_modules/xlsx-style/xlsx.js
++++ b/node_modules/xlsx-style/xlsx.js
+@@ -1335,8 +1335,8 @@ var _fs, jszip;
+ if(typeof JSZip !== 'undefined') jszip = JSZip;
+ if (typeof exports !== 'undefined') {
+ 	if (typeof module !== 'undefined' && module.exports) {
+-		if(has_buf && typeof jszip === 'undefined') jszip = require('js'+'zip');
+-		if(typeof jszip === 'undefined') jszip = require('./js'+'zip').JSZip;
++		if(has_buf && typeof jszip === 'undefined') jszip = require('./jszip.js');
++		if(typeof jszip === 'undefined') jszip = require('./jszip.js');
+ 		_fs = require('f'+'s');
+ 	}
+ }
